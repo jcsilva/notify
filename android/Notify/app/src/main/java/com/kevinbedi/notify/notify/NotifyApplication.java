@@ -16,10 +16,11 @@ public class NotifyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Parse.initialize(
-                this,
-                "HQrMLZDevpTv2J1raSC6KATvlpNqqePPecUE0EgG",
-                "dPK2CAhKJBbtInZKyFJnpJZFAStigdwLGAGlWWPN");
+        Parse.initialize(new Parse.Configuration.Builder(this)
+                .applicationId("T5rfG0KnZ2t7RCm1EcqKstuPqrt0RmfAz3Upcq9a")
+                .clientKey("j9RIdREn4Aa8p3ZuO1uMBE4UvUhNoO44RAlx2wHf")
+                .server("https://parseapi.back4app.com")
+                .build());
         ParseInstallation.getCurrentInstallation().saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {

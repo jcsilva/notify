@@ -11,14 +11,17 @@ Parse.Cloud.define('notify', function(request, response) {
     data: {
       alert: text,
     },
-  }).then(function() {
-    response.success('Notification sent');
-  }, function(error) {
-    response.error(
-      'Error ' +
-      error.code +
-      ': ' +
-      error.message
-    );
-  });
+  }, {
+      useMasterKey: true,
+      success: function() {
+        response.success('Notification sent');
+      },
+      error: function() {
+        response.error('Error '+error.code +': '+error.message);
+      }
+   });
+});
+
+Parse.Cloud.define("hello", function(request, response) {
+  response.success("Hello world!");
 });
