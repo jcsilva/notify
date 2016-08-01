@@ -27,11 +27,11 @@ then
 else
   KEY=`cat ~/.notifyreg`
   curl -X POST \
-  -H "X-Parse-Application-Id: HQrMLZDevpTv2J1raSC6KATvlpNqqePPecUE0EgG" \
-  -H "X-Parse-REST-API-Key: ivgV8ZoA0kyOOLWKms3M0wxYUxyUw4tfGgbj6DFd" \
+  -H "X-Parse-Application-Id: T5rfG0KnZ2t7RCm1EcqKstuPqrt0RmfAz3Upcq9a" \
+  -H "X-Parse-REST-API-Key: 69uI6UnhZyyvEmFGxKVy5wPlhDNRFCM0QQEtui6Y" \
   -H "Content-Type: application/json" \
   -d "{\"key\":\"${KEY}\", \"text\": \"${TEXT}\"}" \
-  https://api.parse.com/1/functions/notify \
+  https://parseapi.back4app.com/functions/notify \
   > /dev/null
 
   echo "[notify] Successfully sent notification."
