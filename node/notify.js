@@ -3,9 +3,11 @@ var Parse = require('parse/node');
 
 // Public parse keys
 Parse.initialize(
-  'HQrMLZDevpTv2J1raSC6KATvlpNqqePPecUE0EgG',
-  'bBHPgeYLFkAx3xb95J1P4g2LsGroF5pEfzLYznw0'
+  'T5rfG0KnZ2t7RCm1EcqKstuPqrt0RmfAz3Upcq9a',  // app id
+  'ciKBKGafsYh7BgjfnbB332Fj7AY7l1t18HmewFLm'   // js key
 );
+
+Parse.serverURL = 'https://parseapi.back4app.com'
 
 var getUserHome = function() {
   return process.env[(process.platform == 'win32') ? 'USERPROFILE' : 'HOME'];
